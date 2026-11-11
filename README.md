@@ -1,3 +1,5 @@
+<img width="1200" height="811" alt="content-calendar" src="https://github.com/user-attachments/assets/dfd27206-f8b6-4ae7-9a7a-f39eac684057" />
+<img width="1100" height="687" alt="agent-roster" src="https://github.com/user-attachments/assets/4cd67622-a527-4275-a4ef-de9f47e595dc" />
 # Kaviyam
 
 **A multi-agent marketing team that runs itself, with a human signing off on anything that leaves the building.**
