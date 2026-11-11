@@ -18,13 +18,11 @@ I designed and built it on my own, starting in April 2026, using Claude Code as 
 <sub>The home screen: one card at a time. Each draft arrives with its QA score, and the operator sends, edits or skips it with a single key.</sub>
 
 ![The Desk, solo tier](docs/screenshots/desk-solo.png)
-<sub>The Desk, shown in its solo-creator layout: the week's numbers, the one thing that needs a decision today, what the agents are doing, and per-agent autonomy.</sub>
+<sub>The Desk, shown in its solo-creator layout: the week's numbers, the one thing that needs a decision today, what the agents are doing, and per-agent autonomy. Figures shown are sample data, not Kaviyam's real numbers.</sub>
 
 <img src="docs/screenshots/kavi-mobile.png" alt="Kavi approval card on a phone" width="320" />
 
-<sub>The same approval card at phone width.</sub>
-
-<sub>All screenshots are from a local build running on sample data.</sub>
+<sub>The same approval card at phone width. All screenshots are from a local build running on sample data.</sub>
 
 ---
 
