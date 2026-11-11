@@ -24,6 +24,8 @@ I designed and built it on my own, starting in April 2026, using Claude Code as 
 
 <sub>The same approval card at phone width. All screenshots are from a local build running on sample data.</sub>
 
+**Video:** [39-second product promo](docs/videos/kaviyam-promo.mp4), made under the product's earlier name, Claire.
+
 ---
 
 ## By the numbers
@@ -141,6 +143,14 @@ What that looks like in practice:
 - **Tests as the contract.** 1,697 tests, so a change to one agent can't quietly break another.
 - **Weekly retros**, written by the QA agent and me, that decide what changes next sprint.
 - **Fail closed by default.** Permissions, channels and ad spend all start at "no".
+
+---
+
+## Other creative work
+
+**[Song of the day #001](docs/videos/sotd-day001.mp4).** My own footage, cut out and animated with a Python lyric-video pipeline I built: it takes a clip, applies one of four stylised looks (posterize, threshold, silhouette, duotone) and lays kinetic lyrics over it, in Reels format.
+
+**[counter-sign](https://github.com/countersign-labs/counter-sign).** An open protocol for how agents ask a human to authorise an action, with a 20-second explainer video.
 
 ---
 
