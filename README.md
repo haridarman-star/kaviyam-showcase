@@ -12,13 +12,29 @@ I designed and built it on my own, starting in April 2026, using Claude Code as 
 
 ---
 
+## What it looks like
+
+![Kavi approval card](docs/screenshots/kavi-approval-card.png)
+<sub>The home screen: one card at a time. Each draft arrives with its QA score, and the operator sends, edits or skips it with a single key.</sub>
+
+![The Desk, solo tier](docs/screenshots/desk-solo.png)
+<sub>The Desk, shown in its solo-creator layout: the week's numbers, the one thing that needs a decision today, what the agents are doing, and per-agent autonomy.</sub>
+
+<img src="docs/screenshots/kavi-mobile.png" alt="Kavi approval card on a phone" width="320" />
+
+<sub>The same approval card at phone width.</sub>
+
+<sub>All screenshots are from a local build running on sample data.</sub>
+
+---
+
 ## By the numbers
 
 | | |
 |---|---|
 | Commits | 266 (Apr 2026 to now) |
 | Python | ~75,000 lines |
-| Tests | 1,604 across 112 test files |
+| Tests | 1,697 across 112 test files |
 | Agents | 17 active, 20 defined |
 | Weekly sprints with a design partner | 10, each with a written retro |
 | Tenants | Multi-tenant, isolated per tenant (database, memory, brand, credentials) |
@@ -39,7 +55,7 @@ Then it learns. Performance data (impressions, opens, clicks) flows back. A crit
 
 | Layer | Agents | Job |
 |---|---|---|
-| Orchestration | **Claire** (CMO) | The only agent a human talks to. Delegates, prioritises, reports back in one voice |
+| Orchestration | **Kavi** (CMO; internal codename Claire) | The only agent a human talks to. Delegates, prioritises, reports back in one voice |
 | Onboarding | **Janus** | Drafts a brand from a URL, guides integrations, diagnoses failures |
 | Intelligence | **Sage**, **Sphinx** | Research briefs; competitive intel and SEO/AEO/GEO |
 | Creation | **Calliope**, **Repurpose**, **Events** | Long-form and email copy; repurposing; event marketing |
@@ -69,7 +85,7 @@ Early on, the copywriting agent produced confident statistics that came from now
 **AEGIS** scores inbound content for prompt injection in two tiers: a free regex pass on everything, and a model-based classifier for genuinely untrusted input like scraped web pages, where regex alone misses indirect injection.
 
 **Channels fail closed.**
-The chat gateway (Telegram, Discord, Slack, WhatsApp) authorises every sender against a per-channel allowlist. An empty allowlist denies everyone. It is outbound-only: no public webhooks, works behind NAT.
+The chat gateway (Telegram, Discord, Slack, WhatsApp) authorises every sender against a per-channel allowlist. An empty allowlist denies everyone. Telegram, Discord and Slack connect outbound-only, so they need no public webhook and work behind NAT. WhatsApp arrives through a single Twilio webhook, and every request is signature-checked before it is parsed.
 
 **Integrations are watched.**
 A watchdog checks every connected integration every 30 minutes and tells the operator, over Discord and WhatsApp, the moment one changes state.
@@ -90,7 +106,7 @@ flowchart LR
     end
     OP <--> Channels
     OP <--> DASH[Dashboard + MCP server]
-    Channels --> CL[Claire<br/>orchestrator]
+    Channels --> CL[Kavi<br/>orchestrator]
     DASH --> CL
     CL --> INT[Intelligence<br/>Sage · Sphinx]
     INT --> CRE[Creation<br/>Calliope · Repurpose]
@@ -124,7 +140,7 @@ I'm a designer by background: seven years across McKinsey client presentations, 
 
 What that looks like in practice:
 - **Specs first.** Every agent is a Markdown spec before it's code.
-- **Tests as the contract.** 1,604 tests, so a change to one agent can't quietly break another.
+- **Tests as the contract.** 1,697 tests, so a change to one agent can't quietly break another.
 - **Weekly retros**, written by the QA agent and me, that decide what changes next sprint.
 - **Fail closed by default.** Permissions, channels and ad spend all start at "no".
 
