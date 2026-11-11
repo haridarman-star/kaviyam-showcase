@@ -1,5 +1,3 @@
-<img width="1200" height="811" alt="content-calendar" src="https://github.com/user-attachments/assets/dfd27206-f8b6-4ae7-9a7a-f39eac684057" />
-<img width="1100" height="687" alt="agent-roster" src="https://github.com/user-attachments/assets/4cd67622-a527-4275-a4ef-de9f47e595dc" />
 # Kaviyam
 
 **A multi-agent marketing team that runs itself, with a human signing off on anything that leaves the building.**
@@ -11,9 +9,6 @@ I designed and built it on my own, starting in April 2026, using Claude Code as 
 **Status: private beta.** One design-partner tenant so far, ten weekly sprints run. Not generally available yet.
 
 > This repo is a public showcase. The product source is private. Everything below describes the system as it runs in beta today, and every number is computed from the private repo.
-
-![Agent roster](docs/screenshots/agent-roster.png)
-<sub>The operator dashboard, shown under the product's earlier name, CLAIRE. Agents grouped by pipeline layer, each with its own model tier and an on/off switch.</sub>
 
 ---
 
@@ -39,9 +34,6 @@ A sprint runs in three phases:
 3. **Render:** video concepts become Remotion `.tsx` and then `.mp4`; carousels render through Satori → resvg to PNG
 
 Then it learns. Performance data (impressions, opens, clicks) flows back. A critic agent turns repeated patterns into staged *beliefs*. A belief is promoted only after enough evidence accumulates, and contradictions go to a human. The next sprint is written with those beliefs in context.
-
-![Content calendar](docs/screenshots/content-calendar.png)
-<sub>Sprint calendar: every content type, every week, with its approval state.</sub>
 
 ### The agent team
 
