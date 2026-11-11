@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haridarman Kumaresan · Video samples</title>
+<meta name="description" content="Video samples by Haridarman Kumaresan (Disco Darman): a song-of-the-day Reel and a Kaviyam product promo.">
+<style>
+  :root { --bg:#f7f1e8; --ink:#1d1a16; --muted:#6b6258; --accent:#c8562b; --card:#fffaf3; --line:#e6dccd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14120f; --ink:#f3ede4; --muted:#a59a8c; --accent:#e9774a; --card:#1d1a16; --line:#2e2a24; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, sans-serif; }
+  main { max-width:960px; margin:0 auto; padding:48px 16px 64px; }
+  .eyebrow { font:600 12px/1 ui-monospace, Menlo, monospace; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+  h1 { font-size:clamp(28px,5vw,44px); line-height:1.1; margin:10px 0 8px; letter-spacing:-.02em; }
+  .lede { color:var(--muted); max-width:620px; margin:0 0 40px; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px; margin-bottom:24px; scroll-margin-top:16px; }
+  .grid { display:grid; gap:20px; align-items:start; }
+  @media (min-width:760px) { #sotd .grid { grid-template-columns: 340px 1fr; } }
+  video { width:100%; border-radius:10px; background:#000; display:block; }
+  #sotd video { max-width:340px; }
+  h2 { font-size:20px; margin:0 0 6px; }
+  p { margin:0 0 10px; }
+  .meta { font:12px/1.4 ui-monospace, Menlo, monospace; color:var(--muted); }
+  a { color:var(--accent); }
+  footer { color:var(--muted); font-size:14px; margin-top:32px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Video samples</div>
+  <h1>Haridarman Kumaresan</h1>
+  <p class="lede">Designer and builder in Bengaluru. Two short pieces: one from my own lyric-video pipeline, one made for Kaviyam, the multi-agent marketing platform I'm building.</p>
+
+  <section id="sotd">
+    <div class="grid">
+      <video src="docs/videos/sotd-day001.mp4" controls playsinline muted loop preload="metadata"></video>
+      <div>
+        <h2>Song of the day #001</h2>
+        <p>My own footage, cut out and animated with a Python lyric-video pipeline I built. It takes a clip, applies one of four stylised looks (posterize, threshold, silhouette, duotone) and lays kinetic lyrics over it, in Reels format.</p>
+        <p class="meta">4:5 · 45 sec · no audio in this cut</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="promo">
+    <video src="docs/videos/kaviyam-promo.mp4" controls playsinline preload="metadata"></video>
+    <h2 style="margin-top:16px">Kaviyam product promo</h2>
+    <p>A 39-second launch film for Kaviyam, made under the product's earlier name, Claire. Kaviyam is in private beta.</p>
+    <p class="meta">16:9 · 39 sec · <a href="https://github.com/haridarman-star/kaviyam-showcase#readme">How Kaviyam works</a></p>
+  </section>
+
+  <footer>
+    Also: <a href="https://github.com/countersign-labs/counter-sign">counter-sign</a>, an open protocol for agents asking a human before they act.<br>
+    <a href="https://www.linkedin.com/in/hari-darman-466644177">LinkedIn</a>
+  </footer>
+</main>
+</body>
+</html>
